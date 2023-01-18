@@ -8,8 +8,7 @@ Prerequisite:
 
 1 - Master  (4GB RAM , 2 Core) t2.medium
 
-2 - Worker  (1 GB, 1 Core)     t2.micro
-
+2 - Worker  (4GB RAM , 2 Core) t2.medium
 
 Note: Open Required Ports In AWS Security Groups. For now we will open All trafic.
 
