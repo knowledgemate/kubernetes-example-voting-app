@@ -3,7 +3,7 @@ Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Servers
 Prerequisite:
 =============
 
-2 - Ubuntu Serves  > 18.2 version
+2 - Ubuntu Serves  > 18.04 version
 
 1 - Master  (4GB RAM , 2 Core) t2.medium
 
