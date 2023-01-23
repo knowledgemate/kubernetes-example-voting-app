@@ -1,3 +1,5 @@
+https://www.howtoforge.com/setup-a-kubernetes-cluster-on-aws-ec2-instance-ubuntu-using-kubeadm/
+
 Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Servers 
 
 Prerequisite:
