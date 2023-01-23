@@ -3,7 +3,7 @@ Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Servers
 Prerequisite:
 =============
 
-2 - Ubuntu Serves  > 18.04 version
+2 - Ubuntu Serves  > 18.04 version  amiid : ami-08fdec01f5df9998f -  ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20221207
 
 1 - Master  (4GB RAM , 2 Core) t2.medium
 
