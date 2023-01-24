@@ -18,19 +18,18 @@ Note: Open Required Ports In AWS Security Groups. For now we will open All trafi
 Switch to root user
    
 sudo su
-
-Turn Off Swap Space
-     
-swapoff -a
-sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
-
-sudo hostnamectl set-hostname "master"
-
+hostname master
 exit
+sudo su  
+swapoff -a
+
+sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \ 
+stable"
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
@@ -39,12 +38,11 @@ deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 
 sudo apt-get update
-
 sudo apt-get install -y docker-ce=18.06.1~ce~3-0~ubuntu kubelet=1.15.7-00 kubeadm=1.15.7-00 kubectl=1.15.7-00
-
 sudo apt-mark hold docker-ce kubelet kubeadm kubectl
 echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
+
 	
 ===========In Master ====================
 # Initialize Kubernates master by executing below commond.
@@ -61,7 +59,6 @@ kubectl get nodes
 ==============  Agent ======================
 sudo kubeadm join 172.31.4.161:6443 --token 0y52t6.ffsj8jkjfcl1sq8h \
    --discovery-token-ca-cert-hash sha256:7aa1825042d19d3e567f7e4b447634e942fe9ed7f18f78464a9c05f451551ed5
-
 
 ==========================
 
